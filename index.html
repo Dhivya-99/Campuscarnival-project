@@ -467,21 +467,21 @@
     }
 
     // ----- Google Apps Script endpoint -----
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxZmsNiKd7nMvdRD-gi8wfM_pHBcwu9LhVtYdI-lLrntsxkqwYJZTu1OQjUTtVb_3Vp/exec";
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyuzAbmLJkqB-h_-_nZhZsWLYa7V_sn7ll2gZsdonBtSUk-CZd6uLrclRmpqVr9ViIP/exec";
 
     const form = document.getElementById("regForm");
     const statusEl = document.getElementById("status");
     const submitBtn = document.getElementById("submitBtn");
 
     function showSuccess() {
-      statusEl.textContent = "Thanks! Your place is claimed.";
+      statusEl.textContent = "Registration request sent! Please check with the event team if your entry does not appear.";
       statusEl.className = "status ok";
       submitBtn.disabled = false;
       form.reset();
     }
 
     function showError() {
-      statusEl.textContent = "Something went wrong. Please try again.";
+      statusEl.textContent = "Could not send your registration. Please try again.";
       statusEl.className = "status err";
       submitBtn.disabled = false;
     }
@@ -509,6 +509,7 @@
       statusEl.textContent = "Submitting...";
       statusEl.className = "status";
 
+      // no-cors sends the request but does not let the browser verify the Sheet response.
       fetch(url, { method: "GET", mode: "no-cors" })
         .then(() => showSuccess())
         .catch(() => showError());
