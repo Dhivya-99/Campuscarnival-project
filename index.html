@@ -161,6 +161,60 @@
     .main-night-image { height: 300px; margin: 28px auto 0; max-width: 900px; overflow: hidden; border-radius: var(--radius); border: 1px solid rgba(255,255,255,.12); box-shadow: 0 18px 45px rgba(0,0,0,.3); }
     .main-night-image img { width: 100%; height: 100%; object-fit: cover; }
 
+
+    /* ----- CARNIVAL OS: interactive experience modules ----- */
+    .os-intro { display:flex; justify-content:space-between; align-items:end; gap:24px; flex-wrap:wrap; }
+    .os-kicker { color:var(--accent-2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    .os-panel { background:linear-gradient(145deg,rgba(24,55,42,.96),rgba(10,27,20,.98)); border:1px solid rgba(164,255,208,.13); border-radius:20px; padding:clamp(20px,3vw,32px); box-shadow:0 18px 55px rgba(0,0,0,.2); }
+    .os-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; margin-top:28px; }
+    .os-heading { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
+    .os-icon { width:42px; height:42px; display:grid; place-items:center; flex:0 0 42px; border-radius:13px; color:var(--accent); background:rgba(233,196,106,.12); font-size:1.25rem; }
+    .os-panel h3 { font-size:1.2rem; margin-bottom:8px; }
+    .os-panel p { color:var(--muted); }
+    .choice-row { display:flex; gap:9px; flex-wrap:wrap; margin:18px 0; }
+    .choice { border:1px solid rgba(255,255,255,.15); border-radius:999px; padding:9px 15px; background:rgba(255,255,255,.035); color:var(--text); cursor:pointer; transition:.25s; }
+    .choice:hover,.choice.selected { color:#06150e; background:var(--accent-2); border-color:var(--accent-2); box-shadow:0 0 20px rgba(47,191,143,.2); }
+    .os-results { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:18px; }
+    .mini-event { padding:15px; border-radius:13px; background:rgba(3,14,10,.5); border:1px solid rgba(255,255,255,.07); }
+    .mini-event strong { display:block; color:var(--accent); margin-bottom:4px; }
+    .mini-event span { color:var(--muted); font-size:.88rem; }
+    .os-inputs { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px; margin:18px 0; }
+    .os-inputs .field { min-width:0; }
+    .os-inputs input { width:100%; }
+    .budget-result { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:18px; }
+    .budget-stat { padding:17px; border-radius:14px; background:rgba(3,14,10,.55); }
+    .budget-stat span { color:var(--muted); font-size:.82rem; display:block; }
+    .budget-stat strong { display:block; color:var(--accent); font-size:1.65rem; margin-top:4px; }
+    .budget-track,.quest-track { height:10px; border-radius:99px; overflow:hidden; background:rgba(255,255,255,.1); margin-top:14px; }
+    .budget-fill,.quest-fill { height:100%; width:0; border-radius:99px; background:linear-gradient(90deg,var(--accent-2),var(--accent)); transition:width .6s ease; }
+    .quest-list { display:grid; gap:12px; margin-top:18px; }
+    .quest-item { display:flex; align-items:center; gap:12px; padding:14px; background:rgba(3,14,10,.45); border:1px solid rgba(255,255,255,.07); border-radius:13px; }
+    .quest-item input { width:19px; height:19px; accent-color:var(--accent-2); flex:0 0 auto; }
+    .quest-copy { flex:1; }
+    .quest-copy strong { display:block; }
+    .quest-copy small { color:var(--muted); }
+    .quest-points { color:var(--accent); font-weight:800; white-space:nowrap; }
+    .quest-summary { display:flex; justify-content:space-between; gap:12px; margin-top:18px; color:var(--muted); }
+    .map-layout { display:grid; grid-template-columns:1.2fr .8fr; gap:20px; margin-top:26px; }
+    .campus-map { position:relative; min-height:390px; overflow:hidden; border:1px solid rgba(164,255,208,.17); border-radius:18px; background:radial-gradient(circle at 50% 45%,rgba(47,191,143,.16),transparent 55%),linear-gradient(135deg,#102b20,#081710); }
+    .map-path { position:absolute; inset:12%; border:2px dashed rgba(164,255,208,.22); border-radius:44% 56% 48% 52%; transform:rotate(-12deg); }
+    .map-zone { position:absolute; transform:translate(-50%,-50%); min-width:112px; padding:13px 10px; border:1px solid rgba(164,255,208,.25); border-radius:13px; color:var(--text); background:rgba(7,18,14,.9); box-shadow:0 8px 24px rgba(0,0,0,.25); font-weight:700; font-size:.84rem; cursor:pointer; transition:.25s; }
+    .map-zone span { display:block; color:var(--accent-2); font-size:1.15rem; margin-bottom:3px; }
+    .map-zone:hover,.map-zone.active { border-color:var(--accent); box-shadow:0 0 25px rgba(233,196,106,.2); background:#183528; }
+    .map-zone.stage { left:50%; top:24%; }
+    .map-zone.food { left:25%; top:55%; }
+    .map-zone.games { left:73%; top:55%; }
+    .map-zone.art { left:50%; top:82%; }
+    .map-info { min-height:100%; display:flex; flex-direction:column; justify-content:center; }
+    .map-info .os-icon { margin-bottom:15px; }
+    .map-info h3 { font-size:1.5rem; }
+    .map-info .map-meta { color:var(--accent); font-size:.85rem; margin:8px 0 14px; }
+    .os-note { font-size:.82rem; color:var(--muted); margin-top:12px; }
+    .os-section { position:relative; overflow:hidden; }
+    .os-section:before { content:""; position:absolute; width:360px; height:360px; right:-190px; top:10%; border-radius:50%; background:rgba(47,191,143,.07); filter:blur(50px); pointer-events:none; }
+    @media(max-width:800px) { .os-grid,.map-layout { grid-template-columns:1fr; } .campus-map { min-height:350px; } }
+    @media(max-width:520px) { .os-results,.os-inputs,.budget-result { grid-template-columns:1fr; } .map-zone { min-width:88px; padding:10px 6px; font-size:.72rem; } .quest-summary { flex-direction:column; } }
+
   </style>
 </head>
 <body>
@@ -173,6 +227,10 @@
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
+          <li><a href="#experience">Build Your Fest</a></li>
+          <li><a href="#quest">Quest</a></li>
+          <li><a href="#budget">Budget</a></li>
+          <li><a href="#map">Fest Map</a></li>
           <li><a href="#flavours">Flavours</a></li>
           <li><a href="#food">Food</a></li>
           <li><a href="#schedule">Schedule</a></li>
@@ -216,6 +274,135 @@
         <div class="card"><h3>Creativity</h3><p>Workshops, art and making things together.</p></div>
         <div class="card"><h3>Connection</h3><p>Meet people who share your taste and your energy.</p></div>
         <div class="card"><h3>Celebration</h3><p>Music, food and moments you will talk about for months.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARNIVAL OS: PERSONAL FEST BUILDER -->
+  <section class="reveal os-section" id="experience">
+    <div class="container">
+      <div class="os-intro">
+        <div><div class="eyebrow">Carnival OS / 01</div><h2>Build your own<br />festival universe.</h2><p class="muted">Your mood. Your mix. Your perfect carnival route.</p></div>
+        <div class="os-kicker">Curated by you · Powered by vibes</div>
+      </div>
+      <div class="os-grid">
+        <div class="os-panel">
+          <div class="os-heading"><div class="os-icon">✦</div><div><div class="os-kicker">Experience builder</div><h3>What are you in the mood for?</h3></div></div>
+          <p>Pick your interests and let the festival create a mini itinerary around you.</p>
+          <div class="choice-row" id="interestChoices">
+            <button class="choice" type="button" data-interest="music">♫ Music</button>
+            <button class="choice" type="button" data-interest="food">✦ Food</button>
+            <button class="choice" type="button" data-interest="games">◎ Gaming</button>
+            <button class="choice" type="button" data-interest="art">✎ Art &amp; Creativity</button>
+            <button class="choice" type="button" data-interest="film">▣ Film</button>
+          </div>
+          <button class="btn" type="button" id="buildExperience">Create my experience ↗</button>
+          <div class="os-results" id="experienceResults" aria-live="polite">
+            <div class="mini-event"><strong>Your festival, your rules</strong><span>Select interests and build your personalised plan.</span></div>
+          </div>
+        </div>
+        <div class="os-panel">
+          <div class="os-heading"><div class="os-icon">⌖</div><div><div class="os-kicker">Your festival identity</div><h3>Choose your energy.</h3></div></div>
+          <p>Every great festival has a signature mood. Choose the one that sounds like you.</p>
+          <div class="choice-row" id="vibeChoices">
+            <button class="choice selected" type="button" data-vibe="The Main Character">Main Character</button>
+            <button class="choice" type="button" data-vibe="The Explorer">Explorer</button>
+            <button class="choice" type="button" data-vibe="The Night Owl">Night Owl</button>
+          </div>
+          <div class="mini-event"><strong id="vibeTitle">THE MAIN CHARACTER ✨</strong><span id="vibeDescription">Front-row energy, iconic pictures and unforgettable performances.</span></div>
+          <p class="os-note">Your selections stay on this page and help shape your suggested plan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARNIVAL QUEST -->
+  <section class="reveal section-alt os-section" id="quest">
+    <div class="container">
+      <div class="eyebrow">Carnival OS / 02 · Collect moments, not just photos</div>
+      <h2>Unlock your carnival quest.</h2>
+      <p class="muted">Complete missions, earn points and build your festival streak. Your progress is saved on this device.</p>
+      <div class="os-grid">
+        <div class="os-panel">
+          <div class="os-heading"><div class="os-icon">⚡</div><div><div class="os-kicker">Mission control</div><h3>Today's side quests</h3></div></div>
+          <div class="quest-list" id="questList">
+            <label class="quest-item"><input type="checkbox" data-points="100" /><span class="quest-copy"><strong>Discover a new performance</strong><small>Step into a stage you have never explored.</small></span><span class="quest-points">+100 XP</span></label>
+            <label class="quest-item"><input type="checkbox" data-points="75" /><span class="quest-copy"><strong>Try a festival special</strong><small>Find a new flavour at the food lane.</small></span><span class="quest-points">+75 XP</span></label>
+            <label class="quest-item"><input type="checkbox" data-points="125" /><span class="quest-copy"><strong>Make a new carnival connection</strong><small>Meet someone new and share a moment.</small></span><span class="quest-points">+125 XP</span></label>
+            <label class="quest-item"><input type="checkbox" data-points="100" /><span class="quest-copy"><strong>Explore a hidden zone</strong><small>Visit the creative or gaming corner.</small></span><span class="quest-points">+100 XP</span></label>
+          </div>
+        </div>
+        <div class="os-panel">
+          <div class="os-kicker">Your player profile</div>
+          <h3 style="font-size:2rem;margin-top:8px;">The memory collector.</h3>
+          <p>Every mission completed brings you closer to carnival legend status.</p>
+          <div class="quest-summary"><span>QUEST PROGRESS</span><strong id="questCount">0 / 4 completed</strong></div>
+          <div class="quest-track"><div class="quest-fill" id="questFill"></div></div>
+          <div class="budget-result">
+            <div class="budget-stat"><span>TOTAL XP</span><strong id="questXP">0</strong></div>
+            <div class="budget-stat"><span>YOUR RANK</span><strong id="questRank">Rookie</strong></div>
+          </div>
+          <p class="os-note" id="questMessage" aria-live="polite">Your first mission is waiting. Let's go!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SMART BUDGET -->
+  <section class="reveal os-section" id="budget">
+    <div class="container">
+      <div class="eyebrow">Carnival OS / 03 · Spend smart, enjoy more</div>
+      <h2>Your vibe. Your budget.<br />No surprise endings.</h2>
+      <p class="muted">Set your spending limit and track your festival expenses in real time.</p>
+      <div class="os-grid">
+        <div class="os-panel">
+          <div class="os-heading"><div class="os-icon">₹</div><div><div class="os-kicker">Smart budget planner</div><h3>Plan your spend</h3></div></div>
+          <div class="os-inputs">
+            <div class="field"><label for="totalBudget">Your total budget (₹)</label><input id="totalBudget" type="number" min="0" step="1" value="1500" /></div>
+            <div class="field"><label for="foodSpend">Food &amp; drinks (₹)</label><input id="foodSpend" type="number" min="0" step="1" value="400" /></div>
+            <div class="field"><label for="gameSpend">Games &amp; activities (₹)</label><input id="gameSpend" type="number" min="0" step="1" value="250" /></div>
+            <div class="field"><label for="otherSpend">Shopping &amp; other (₹)</label><input id="otherSpend" type="number" min="0" step="1" value="150" /></div>
+          </div>
+          <button class="btn" type="button" id="calculateBudget">Calculate my budget ↗</button>
+          <p class="os-note">A planning tool only. Actual stall prices may vary.</p>
+        </div>
+        <div class="os-panel">
+          <div class="os-kicker">Live spending overview</div>
+          <h3 style="font-size:1.5rem;margin-top:8px;">Keep your balance in check.</h3>
+          <div class="budget-result">
+            <div class="budget-stat"><span>TOTAL SPENT</span><strong id="totalSpent">₹800</strong></div>
+            <div class="budget-stat"><span>REMAINING</span><strong id="remainingBudget">₹700</strong></div>
+          </div>
+          <div class="quest-summary"><span>BUDGET USED</span><strong id="budgetPercent">53%</strong></div>
+          <div class="budget-track"><div class="budget-fill" id="budgetFill" style="width:53%"></div></div>
+          <p class="os-note" id="budgetMessage" aria-live="polite">You're on track. Save some room for a surprise!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE FEST MAP -->
+  <section class="reveal section-alt os-section" id="map">
+    <div class="container">
+      <div class="eyebrow">Carnival OS / 04 · Find your next favourite moment</div>
+      <h2>Explore the festival grounds.</h2>
+      <p class="muted">Tap a zone to discover what's happening there. This is an illustrative event map, not a live GPS map.</p>
+      <div class="map-layout">
+        <div class="campus-map" aria-label="Illustrative carnival map">
+          <div class="map-path"></div>
+          <button class="map-zone stage active" type="button" data-zone="stage"><span>♫</span>Main Stage</button>
+          <button class="map-zone food" type="button" data-zone="food"><span>♨</span>Food Lane</button>
+          <button class="map-zone games" type="button" data-zone="games"><span>◎</span>Game Arena</button>
+          <button class="map-zone art" type="button" data-zone="art"><span>✎</span>Creative Hub</button>
+        </div>
+        <div class="os-panel map-info" aria-live="polite">
+          <div class="os-icon" id="mapIcon">♫</div>
+          <div class="os-kicker">Selected destination</div>
+          <h3 id="mapTitle">Main Stage</h3>
+          <div class="map-meta" id="mapMeta">LIVE MUSIC · CENTRAL GROUNDS</div>
+          <p id="mapDescription">Catch headline performances, dance showcases and the big closing-night energy.</p>
+          <p class="os-note">Choose another pin on the map to explore the carnival.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -524,6 +711,113 @@
         document.querySelectorAll(".flavour").forEach(function (card) {
           card.style.display = (f === "all" || card.dataset.cat === f) ? "" : "none";
         });
+      });
+    });
+
+
+    // ----- CARNIVAL OS: Experience Builder -----
+    const activityCatalog = [
+      { name: "Live Stage Sessions", category: "music", detail: "Main stage · Live performances" },
+      { name: "Late Night DJ Sets", category: "music", detail: "Main stage · After-dark energy" },
+      { name: "Food Lane Discovery", category: "food", detail: "Food lane · Local favourites" },
+      { name: "Carnival Game Arena", category: "games", detail: "Game arena · Play and compete" },
+      { name: "Creative Corner", category: "art", detail: "Creative hub · Make something" },
+      { name: "Open-Air Screenings", category: "film", detail: "Film lawn · Movies under the stars" }
+    ];
+    const chosenInterests = new Set();
+    document.querySelectorAll("[data-interest]").forEach(button => {
+      button.addEventListener("click", () => {
+        const interest = button.dataset.interest;
+        if (chosenInterests.has(interest)) {
+          chosenInterests.delete(interest);
+          button.classList.remove("selected");
+        } else {
+          chosenInterests.add(interest);
+          button.classList.add("selected");
+        }
+      });
+    });
+    document.getElementById("buildExperience").addEventListener("click", () => {
+      const results = document.getElementById("experienceResults");
+      const matches = activityCatalog.filter(activity => chosenInterests.has(activity.category));
+      if (!matches.length) {
+        results.innerHTML = '<div class="mini-event"><strong>Choose your vibe first</strong><span>Select at least one interest above to build your plan.</span></div>';
+        return;
+      }
+      results.innerHTML = matches.map(activity => '<div class="mini-event"><strong>' + activity.name + '</strong><span>' + activity.detail + '</span></div>').join("");
+    });
+
+    // Festival identity selector
+    const vibeCopy = {
+      "The Main Character": "Front-row energy, iconic pictures and unforgettable performances.",
+      "The Explorer": "Curious energy, hidden corners and unexpected discoveries.",
+      "The Night Owl": "After-dark beats, glowing lights and late-night memories."
+    };
+    document.querySelectorAll("[data-vibe]").forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll("[data-vibe]").forEach(item => item.classList.remove("selected"));
+        button.classList.add("selected");
+        document.getElementById("vibeTitle").textContent = button.dataset.vibe.toUpperCase() + " ✨";
+        document.getElementById("vibeDescription").textContent = vibeCopy[button.dataset.vibe];
+      });
+    });
+
+    // ----- CARNIVAL OS: Quest progress (saved on this device) -----
+    const questChecks = [...document.querySelectorAll("#questList input[type='checkbox']")];
+    const questStorageKey = "wholeMoodFestQuestV1";
+    try {
+      const savedQuests = JSON.parse(localStorage.getItem(questStorageKey) || "[]");
+      questChecks.forEach((checkbox, index) => { checkbox.checked = savedQuests[index] === true; });
+    } catch (error) { console.warn("Quest progress could not be restored.", error); }
+    function updateQuest() {
+      const completed = questChecks.filter(item => item.checked);
+      const xp = completed.reduce((total, item) => total + Number(item.dataset.points), 0);
+      const count = completed.length;
+      document.getElementById("questCount").textContent = count + " / " + questChecks.length + " completed";
+      document.getElementById("questXP").textContent = xp + " XP";
+      document.getElementById("questFill").style.width = (count / questChecks.length * 100) + "%";
+      document.getElementById("questRank").textContent = xp >= 350 ? "Legend" : xp >= 200 ? "Trailblazer" : xp >= 100 ? "Explorer" : "Rookie";
+      document.getElementById("questMessage").textContent = count === questChecks.length ? "All missions complete. You are a Carnival Legend! ✨" : count ? "Nice progress. One more memory unlocked!" : "Your first mission is waiting. Let's go!";
+      try { localStorage.setItem(questStorageKey, JSON.stringify(questChecks.map(item => item.checked))); }
+      catch (error) { console.warn("Quest progress could not be saved.", error); }
+    }
+    questChecks.forEach(item => item.addEventListener("change", updateQuest));
+    updateQuest();
+
+    // ----- CARNIVAL OS: Smart Budget -----
+    const money = value => Math.max(0, Number(value) || 0);
+    function calculateBudget() {
+      const total = money(document.getElementById("totalBudget").value);
+      const spent = money(document.getElementById("foodSpend").value) + money(document.getElementById("gameSpend").value) + money(document.getElementById("otherSpend").value);
+      const remaining = total - spent;
+      const percent = total > 0 ? Math.min(100, Math.round(spent / total * 100)) : (spent > 0 ? 100 : 0);
+      document.getElementById("totalSpent").textContent = "₹" + spent.toLocaleString("en-IN");
+      document.getElementById("remainingBudget").textContent = (remaining < 0 ? "-₹" + Math.abs(remaining).toLocaleString("en-IN") : "₹" + remaining.toLocaleString("en-IN"));
+      document.getElementById("budgetPercent").textContent = percent + "%";
+      document.getElementById("budgetFill").style.width = percent + "%";
+      document.getElementById("budgetFill").style.background = remaining < 0 ? "linear-gradient(90deg,#ff8a80,#e85d5d)" : "linear-gradient(90deg,var(--accent-2),var(--accent))";
+      document.getElementById("budgetMessage").textContent = remaining < 0 ? "Budget exceeded by ₹" + Math.abs(remaining).toLocaleString("en-IN") + ". Time to cut back on a few extras." : remaining === 0 ? "Exactly on budget. Enjoy responsibly!" : percent >= 80 ? "You're getting close to your limit. Keep an eye on those extras." : "You're on track. Save some room for a surprise!";
+    }
+    document.getElementById("calculateBudget").addEventListener("click", calculateBudget);
+    ["totalBudget","foodSpend","gameSpend","otherSpend"].forEach(id => document.getElementById(id).addEventListener("input", calculateBudget));
+    calculateBudget();
+
+    // ----- CARNIVAL OS: Interactive map -----
+    const mapZones = {
+      stage: { icon:"♫", title:"Main Stage", meta:"LIVE MUSIC · CENTRAL GROUNDS", description:"Catch headline performances, dance showcases and the big closing-night energy." },
+      food: { icon:"♨", title:"Food Lane", meta:"FOOD & DRINKS · EAST WALK", description:"Explore street-food favourites, sweet treats and refreshing festival drinks." },
+      games: { icon:"◎", title:"Game Arena", meta:"GAMES · WEST COURT", description:"Challenge your friends with carnival games, mini competitions and arcade-style fun." },
+      art: { icon:"✎", title:"Creative Hub", meta:"ART & WORKSHOPS · GARDEN SIDE", description:"Make something memorable with creative workshops, photo moments and hands-on activities." }
+    };
+    document.querySelectorAll("[data-zone]").forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll("[data-zone]").forEach(item => item.classList.remove("active"));
+        button.classList.add("active");
+        const zone = mapZones[button.dataset.zone];
+        document.getElementById("mapIcon").textContent = zone.icon;
+        document.getElementById("mapTitle").textContent = zone.title;
+        document.getElementById("mapMeta").textContent = zone.meta;
+        document.getElementById("mapDescription").textContent = zone.description;
       });
     });
 
